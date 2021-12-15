@@ -23,7 +23,21 @@ RSpec.describe Vehicle do
       @vehicle.speed
       expect(@vehicle.speeding?).to be true
     end
-  end 
+  end
+
+  describe 'add_passengers' do
+    it 'will start with no passengers' do
+      expect(@vehicle.passengers).to be_empty
+    end
+    it 'can add passengers' do
+      @vehicle.add_passenger(@charlie)
+      @vehicle.add_passenger(@jude)
+      @vehicle.add_passenger(@taylor)
+      expect(@vehicle.passengers).to eq([@charlie, @jude, @taylor])
+    end
+
+  end
+
 
 
 end
