@@ -14,5 +14,10 @@ RSpec.describe do
   it 'will recognize ages' do
     expect(@charlie.age).to eq(18)
     expect(@taylor.age).to eq(12)
+  end
+
+  it 'will recognize if passenger is an adult' do
+    expect(@charlie.adult?).to be true
+    expect(@taylor.adult?).to be false
   end 
 end
