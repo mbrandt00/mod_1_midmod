@@ -13,6 +13,16 @@ RSpec.describe Vehicle do
     expect(@vehicle.year).to eq('2001')
     expect(@vehicle.make).to eq('Honda')
     expect(@vehicle.model).to eq('Civic')
+  end
+
+  describe 'speeding' do
+    it 'is not speeding by default' do
+      expect(@vehicle.speeding?).to be false
+    end
+    it 'can speed' do
+      @vehicle.speed
+      expect(@vehicle.speeding?).to be true
+    end
   end 
 
 
