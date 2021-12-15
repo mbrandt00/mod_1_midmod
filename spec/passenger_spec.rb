@@ -19,5 +19,11 @@ RSpec.describe do
   it 'will recognize if passenger is an adult' do
     expect(@charlie.adult?).to be true
     expect(@taylor.adult?).to be false
+  end
+
+  it 'will recognize driving status' do
+    expect(@charlie.driver?).to be false
+    @charlie.drive
+    expect(@charlie.driver?).to be true
   end 
 end
