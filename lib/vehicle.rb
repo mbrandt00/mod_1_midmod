@@ -21,4 +21,9 @@ class Vehicle
   def add_passenger(passenger)
     @passengers << passenger
   end
+
+  def num_adults
+    adults_in_vehicle = @passengers.select {|passenger| passenger.adult?}
+    return adults_in_vehicle.count
+  end 
 end
